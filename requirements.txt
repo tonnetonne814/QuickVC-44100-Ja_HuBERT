@@ -1,0 +1,9 @@
+tqdm
+transformers
+scikit-learn
+tensorboard
+librosa==0.9.1
+matplotlib
+torchcrepe
+pyworld
+praat-parselmouth
