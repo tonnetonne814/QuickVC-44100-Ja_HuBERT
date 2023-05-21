@@ -7,3 +7,4 @@ matplotlib
 torchcrepe
 pyworld
 praat-parselmouth
+soundcard

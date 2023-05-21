@@ -78,9 +78,22 @@ python train.py -c configs/quickvc_44100.json -m YourModelName
 tensorboard --logdir logs
 ```
 
-## 5. 推論 & 事前学習モデル
-未実装
+## 5. 推論
+次のコマンドを入力することで、推論を開始する。config.jsonへのパス、生成器モデルパスを指定する。
 
+```sh
+python inference.py --config ./path/to/config.json --model_path ./path/to/G_xxx.pth 
+```
+実行後、Terminal上にて使用するデバイスを選択後、以下のループが処理される。
+1. ターゲット音声パスの入力
+1. ソース音声ファイルパスの入力
+1. F0計算方式の入力 ( dio:0 | parselmouth:1 | harvest:2 | crepe:3 )
+1. 処理実行、処理時間表示
+1. 音声とログデータの保存(infer_logsフォルダがデフォルト)
+1. 音声の再生
+
+## 事前学習モデル
+未実装。学習音源選定中。
 
 ## 参考文献
 - [QuickVC-VoiceConversion](https://github.com/quickvc/QuickVC-VoiceConversion)
